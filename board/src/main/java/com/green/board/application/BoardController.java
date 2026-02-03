@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j // Spring log for J
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("board")
+@RequestMapping("api/board")
 public class BoardController {
     private final BoardService boardService;
 
