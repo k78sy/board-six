@@ -9,6 +9,25 @@ class httpService {
         return res.data;
     }
 
+    async findAll(params){
+        const res = await axios.get(this.#url, {params});
+        return res.data;
+    }
+    
+    async findOne(no){
+        const res = await axios.get(`${this.#url}/${no}`);
+        return res.data
+    }
+
+    async update(jsonBody){
+        const res = await axios.put(this.#url, jsonBody);
+        return res.data;
+    }
+
+    async delete(params){
+        const res = await axios.delete(this.#url, {params});
+        return res.data; 
+    }
 }
 
 export default new httpService();

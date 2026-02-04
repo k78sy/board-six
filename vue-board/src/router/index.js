@@ -8,8 +8,16 @@ const router = createRouter({
       component: () => import('../views/BoardList.vue'),
     },
     {
+      path: '/mod/:id',
+      component: () => import('../views/BoardWriteMod.vue'),
+    },
+    {
       path: '/write',
       component: () => import('../views/BoardWriteMod.vue'),
+    },
+    {
+      path: '/detail/:id',
+      component: () => import('../views/BoardDetail.vue'),
     },
   ],
 })
